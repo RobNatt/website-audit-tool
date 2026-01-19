@@ -47,7 +47,7 @@ export default function Home() {
       }
 
       // Call Google PageSpeed API
-      const API_KEY = 'AIzaSyBFCuqkba3Oof1yvUrjE10fOD_8emnOxZg'
+      const API_KEY = process.env.NEXT_PUBLIC_GOOGLE_API_KEY
 const response = await fetch(
   `https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=${encodeURIComponent(url)}&category=PERFORMANCE&category=ACCESSIBILITY&category=SEO&category=BEST_PRACTICES&strategy=mobile&key=${API_KEY}`
 )
